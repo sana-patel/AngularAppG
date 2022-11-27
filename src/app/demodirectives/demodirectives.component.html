@@ -1,0 +1,41 @@
+<p *ngIf="isShow">demodirectives works!</p>
+
+<div *ngIf="isShow">
+    
+        <li ><input type="checkbox" name="check" id="Ground1" value="1">Click on check box to hide content.
+        <p *ngIf= "isChecked">
+            
+        </p></li>
+        
+       
+    
+    </div>
+
+<div>
+    <div>
+        {{title}}
+    </div>
+</div>
+
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Director</th>
+                <th>Cast</th>
+                <th>ReleaseDate</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let movie of movies">
+                <td>{{movie.title}}</td>
+                <td>{{movie.director}}</td>
+                <td>{{movie.Cast}}</td>
+                <td>{{movie.releaseDate}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

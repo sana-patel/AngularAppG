@@ -1,0 +1,56 @@
+<p>drective-assignment works!</p>
+<!-- <input type="checkbox",name='check',value=1> click here to the information. -->
+<div class="input-group-text" >
+    <input type="checkbox" aria-label="Checkbox for following text input">
+     &nbsp;  click here to see information.
+  </div>
+
+  <div *ngIf="isChecked">
+    Riza patel
+  </div>
+
+  <div>
+
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Cost</th>
+                <th>Publish Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor= "let book of books">
+                <td>{{book.title}}</td>
+                <td>{{book.Author}}</td>
+                <td>{{book.Cost}}</td>
+                <td>{{book.publishedDate}}</td>
+
+            </tr>
+        </tbody>
+
+    </table>
+  </div>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <select class="form-control" (change)="getProductValues($event)" >
+                <option value="Default">Select Product</option>
+                <option value="The Power of Positive Thinking">'The Power of Positive Thinking'</option>
+                <option value="Think and Grow Rich">'Think and Grow Rich'</option>
+                <option value="Learning How to Fly: Life Lessons for the Youth">'Learning How to Fly: Life Lessons for the Youth'</option>
+            
+            </select>
+        </div>
+        <div class="col-md-12" [ngSwitch]="selectedProduct">
+            <h2 class="text-success" *ngSwitchDefault>Please select Book</h2>
+            <h2 class="text-success" *ngSwitchCase="'The Power of Positive Thinking'">The Power of Positive Thinking</h2>
+            <h2 class="text-success" *ngSwitchCase="'Think and Grow Rich'">Think and Grow Rich</h2>
+            <h2 class="text-success" *ngSwitchCase="'Learning How to Fly: Life Lessons for the Youth'">Learning How to Fly: Life Lessons for the Youth</h2>
+           
+
+        </div>
+    </div>
+</div>

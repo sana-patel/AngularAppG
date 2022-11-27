@@ -1,0 +1,13 @@
+<p style="text-align: center  ; font-size: larger; color: blue; ">data-binding works!</p>
+
+<div class="databind">
+    <ol>
+    <li>Enter User Name:<input type = "text"[(ngModel)]="serverName"></li>
+    <hr><br>
+    User Name is: {{serverName}}
+    <hr><br>
+    <li> <button [disabled]=" !allowData" (click)="onCreateServer()">Click here</button></li>
+    <!-- <div>{{getServerStatus()}}</div> -->
+    </ol>
+   </div>
+ 
