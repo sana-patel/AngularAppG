@@ -9,6 +9,9 @@ import { FormsModule }   from '@angular/forms';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DemodirectivesComponent } from './demodirectives/demodirectives.component';
 import { DrectiveAssignmentComponent } from './drective-assignment/drective-assignment.component';
+import { AttriComponent } from './attri/attri.component';
+import { CustdirDirective } from './custdir.directive';
+import { ComponetDirectivesComponent } from './componet-directives/componet-directives.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { DrectiveAssignmentComponent } from './drective-assignment/drective-assi
     DataBindingComponent,
     DemodirectivesComponent,
     DrectiveAssignmentComponent,
+    AttriComponent,
+    CustdirDirective,
+    ComponetDirectivesComponent,
     
   
     

@@ -10,7 +10,7 @@ import { Book } from '../models/movies';
 
 export class DrectiveAssignmentComponent implements OnInit {
 
-  isChecked =true
+
 
   title:string="three best books.";
   // titles : string = "Top 3 Movies";
@@ -28,9 +28,13 @@ export class DrectiveAssignmentComponent implements OnInit {
   ngOnInit() {
    
   }
-  getProductValue(value) {
+  getProductValues(value) {
     console.log(value.target.value);
     this.selectedProduct = value.target.value;
+  }
+  isChecked:boolean = false
+  onCreateBlock(){
+    this.isChecked=true
   }
 
 }

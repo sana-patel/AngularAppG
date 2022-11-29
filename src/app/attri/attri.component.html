@@ -1,0 +1,27 @@
+<p>attri works!</p>
+<div [ngStyle]="{'color': colorVal,'background-color':'gray'}">
+    angular Learning
+</div>
+<h4>Ng Class</h4>
+
+<ul *ngFor="let person of people">
+    <li [ngClass]="{
+        'text-success': person.country === 'UK',
+        'text-primary': person.country === 'USA',
+        'text-danger': person.country === 'HK'
+    }">
+ 
+     {{person.name}} ({{person.country}})
+    </li>
+</ul>
+
+<p>Normal para</p>
+<p appCustdir>Custom para</p>
+
+<div>
+    <input type="text" #usernames (key.enter)="show(username.value)">
+</div>
+<button (click)="show(username.value)">Show</button>
+<div>
+    {{username}}
+</div>
