@@ -12,6 +12,8 @@ import { DrectiveAssignmentComponent } from './drective-assignment/drective-assi
 import { AttriComponent } from './attri/attri.component';
 import { CustdirDirective } from './custdir.directive';
 import { ComponetDirectivesComponent } from './componet-directives/componet-directives.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { ComponetDirectivesComponent } from './componet-directives/componet-dire
     AttriComponent,
     CustdirDirective,
     ComponetDirectivesComponent,
+    ParentComponent,
+    ChildComponent,
     
   
     

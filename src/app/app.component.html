@@ -32,4 +32,53 @@
 <!-- <app-drective-assignment></app-drective-assignment> -->
 <!-- <app-demodirectives></app-demodirectives> -->
 <!-- <app-ngswitch></app-ngswitch> -->
-<app-attri></app-attri>
+<!-- <app-attri></app-attri> -->
+
+<!-- <app-child title="video1" disc="disc1"url="none"></app-child> -->
+<!-- 
+<ul>
+  <li></li>
+</ul>
+
+<div>
+<app-child [employeeName]="e"(foodEvent)='getDataFromChild($event)'></app-child>
+ap
+</div> -->
+
+<ul *ngFor="let f of foods">
+  <li>
+    {{f}}
+  </li>
+</ul>
+
+<!-- <div >
+<app-child  (foodevent)="getDataFromChild($event)"> -->
+
+<!-- </app-child>
+<h2>{{msg}}</h2> -->
+<!-- <app-child (childEvent)="msg=$event"></app-child> -->
+<!-- <h2>{{msgObj}}</h2> -->
+<app-child (childEvent)="getDataFromChild($event)" ></app-child>
+<!-- {{value}} -->
+<div style="background-color:rgb(234, 241, 155);color: rgb(52, 6, 71); font-size: larger; margin-right: 20%;margin-left: 20%;">
+<ul *ngFor="let p of prop">
+  <li>
+    Name: {{p.fullName}}
+  </li>
+  <li>
+    Age : {{p.age}}
+  </li>
+  <li>
+    isMarried : {{p.isMarried}}
+  </li>
+  <li>
+    Address : {{p.address}}
+  </li>
+  <li>
+    City : {{p.city}}
+  </li>
+  <li>
+    Hobby : {{p.hobby}}
+  </li>
+</ul>
+</div>
