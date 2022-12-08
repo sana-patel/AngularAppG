@@ -12,7 +12,8 @@ export class ChildComponent implements OnInit {
 // @Input() url:any
 // @Input() item=0
 // @Output() foodevent: EventEmitter<string> = new EventEmitter<string>();
-
+@Input() myData:string=''
+@Input() myValue:string=""
 @Output()public childEvent : EventEmitter<any> = new EventEmitter<any>(); 
 // @Output() objChildEvent: EventEmitter<any> = new EventEmitter<any>(); 
 // obj: {

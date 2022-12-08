@@ -9,8 +9,8 @@ import { Component,OnInit} from '@angular/core';
 })
 export class AppComponent {
   title = 'angularapp';
-  public msg="";
-  public msgObj="";
+  public  uid :number;
+ 
 employeeRecords:any=[
  { 
   ename:'sana' ,ecity:"pune",esalary:"50000"},
@@ -19,8 +19,9 @@ employeeRecords:any=[
 
 ]
  
+name = "sana patel"
 
- 
+
 
     
    

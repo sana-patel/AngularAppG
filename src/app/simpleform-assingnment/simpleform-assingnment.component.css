@@ -1,0 +1,17 @@
+input.ng-invalid.ng-touched{
+    border-color: red;
+}
+ 
+input,select{
+    height: 40px;
+    width: 50%;
+}
+div{
+    background-image: url("https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg");
+}
+
+form{
+     font-size: 16px;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}

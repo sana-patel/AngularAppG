@@ -1,15 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
-  </h1>
+  </h1> -->
  <!-- <app-server></app-server>
  <app-demo></app-demo> -->
 
-
+<!-- 
   <img width="200" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
+</div> -->
  
 <!-- <app-data-binding></app-data-binding> -->
 <!-- <h2>Here are some links to help you start: </h2> -->
@@ -44,7 +44,7 @@
 <app-child [employeeName]="e"(foodEvent)='getDataFromChild($event)'></app-child>
 ap
 </div> -->
-
+<!-- 
 <ul *ngFor="let f of foods">
   <li>
     {{f}}
@@ -58,9 +58,9 @@ ap
 <h2>{{msg}}</h2> -->
 <!-- <app-child (childEvent)="msg=$event"></app-child> -->
 <!-- <h2>{{msgObj}}</h2> -->
-<app-child (childEvent)="getDataFromChild($event)" ></app-child>
+<!-- <app-child (childEvent)="getDataFromChild($event)" ></app-child> -->
 <!-- {{value}} -->
-<div style="background-color:rgb(234, 241, 155);color: rgb(52, 6, 71); font-size: larger; margin-right: 20%;margin-left: 20%;">
+<!-- <div style="background-color:rgb(234, 241, 155);color: rgb(52, 6, 71); font-size: larger; margin-right: 20%;margin-left: 20%;">
 <ul *ngFor="let p of prop">
   <li>
     Name: {{p.fullName}}
@@ -82,3 +82,33 @@ ap
   </li>
 </ul>
 </div>
+
+<input type="text" (blur)="handleData($event)">
+<app-hooks [userid]="uid" *ngIf="appchildExist"
+>
+  <h1>This is child content coming from parent component</h1>
+
+
+</app-hooks> -->
+
+<!-- <button class="btn btn-danger" (click)="destroy()">Destroy component</button> --> 
+
+
+
+
+
+<!-- <select (change)="uid= sid.value" #sid>
+  <option  selected disabled> No value selected</option>
+  <option [value]="id" *ngFor ="let id of[1,2,3,4,5]"></option>
+  {{id}}
+</select> -->
+
+<!-- <input type="text" placeholder="Input here"  class="form-control" #val><br><br>
+<button (click)="submitvalue(val)" class="btn btn-success">submitValue</button> -->
+<!-- <app-child [myData]="name" ></app-child> -->
+<!-- <app-child [myValue]="value" ></app-child> -->
+
+<!-- <app-dir-assign></app-dir-assign> -->
+<!-- <app-simpletemplete-form></app-simpletemplete-form> -->
+<!-- <app-simpleform></app-simpleform> -->
+<app-simpleform-assingnment></app-simpleform-assingnment>

@@ -14,6 +14,11 @@ import { CustdirDirective } from './custdir.directive';
 import { ComponetDirectivesComponent } from './componet-directives/componet-directives.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { HooksComponent } from './hookss/hookss/hooks.component';
+import { DirAssignComponent } from './dir-assign/dir-assign.component';
+import { SimpletempleteFormComponent } from './simpletemplete-form/simpletemplete-form.component';
+import { SimpleformComponent } from 'simpleform/simpleform.component';
+import { SimpleformAssingnmentComponent } from './simpleform-assingnment/simpleform-assingnment.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +34,11 @@ import { ChildComponent } from './child/child.component';
     ComponetDirectivesComponent,
     ParentComponent,
     ChildComponent,
-    
+    HooksComponent,
+    DirAssignComponent,
+    SimpletempleteFormComponent,
+    SimpleformComponent,
+    SimpleformAssingnmentComponent,
   
     
   ],
