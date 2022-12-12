@@ -8,17 +8,26 @@
 
 
 <div class="form-group" class="container" style="padding-left:30%;">
-    <form #simpleForm="ngForm" (ngSubmit)="getUserValue(simpleForm.value)">
+    <form #simpleForm="ngForm" name="myForm" (ngSubmit)="getUserValue(simpleForm.value)" >
         <input type="text" name="User name" placeholder="Enter name" required ngModel> <br><br>
         <input type="text" name="Age" placeholder="Enter age" ngModel><br><br>
-        <input type="text" name=" Email" email placeholder="Enter Email" required ngModel #email="ngModel"><br>
-        <span class="help-bpx" *ngIf="email.touched && !email.valid" style="color: red;">please enter valid
-            email</span><br><br>
+        <input type="text" name=" Email" email placeholder="Enter Email" required ngModel #email="ngModel" [pattern]="emailPattern" ><br>
+        <!-- <span ng-show="myForm.$invalid"  style="color: red;">wrong email domain!</span> -->
+        <span *ngIf="email.errors.pattern" style="color: red;">Email Domain invalid</span>
+        <!-- <span class="help-bpx" *ngIf="email.touched && !email.valid" style="color: red;">please enter valid
+            email</span>-->
+            <br><br> 
+   
+
+
+
+
+
         <!-- <div class="form-group"> -->
         <!-- <label for="Rooms">Select Room type</label> -->
         <!-- <input type="text" name="Rooms" placeholder="Select number of Rooms" ngModel> -->
         <label for="Rooms">Select Room type</label> <br>
-        <select name="Rooms"  required ngModel>
+        <select name="Rooms"  required ngModel [ngModel]="defaultValue">
             <option value="Standard Room (1 to 2 People)">Standard Room (1 to 2 People)</option>
             <option value="Family Room (1 to 4 People)">Family Room (1 to 4 People)</option>
             <option value="Private Room (1 to 3 People)">Private Room (1 to 3 People)</option>
@@ -26,9 +35,9 @@
 
         </select><br><br>
         <label>Arrival Date:</label> &nbsp;&nbsp;<br>
-        <input type="date" name="date" placeholder="Arival Date and time" required ngModel><br><br>
+        <input type="date" name="date" placeholder="Arrival Date and time" required ngModel min={{minDate}}><br><br>
         <label>Departure Date:</label> &nbsp;&nbsp;<br>
-        <input type="date" name="date" placeholder="Departure Date" required ngModel><br><br>
+        <input type="date" name="date" placeholder="Departure Date" required ngModel  min="2022-12-10"><br><br>
 
         <label>Free Pickup?</label><br><br>
         <input type="checkbox" name="yPickup" value="y" ngModel style="width:5%">&nbsp;
@@ -41,7 +50,7 @@
         <br><br>
 
         <!-- </div> -->
-        <button class="btn btn-success" [disabled]="!ngForm.valid">Get User Data</button>
+        <button class="btn btn-danger" [disabled]="!ngForm.valid">Confirm Booking</button>
     </form>
 </div>
 <!-- 
