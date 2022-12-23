@@ -1,0 +1,68 @@
+<!-- <p>pipefilter works!</p>
+
+<div class= "row justify-content-center">
+<div class="col-md-8 form-inline mb-2">
+    <label for="pruductid">Search by product</label>
+    <input type="text" class="form-control" id="productid" placeholder="Enter product name" [(ngModel)]="namesearch">
+</div>
+
+<div class="col-md-8 ">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">sno</th>
+                <th scope="col">name</th>
+                <th scope="col">price</th>
+                <th scope="col">availability</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of productArr | pipefilter:namesearch">
+                <th scope="row">{{product.sno}}</th>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.availability}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+</div> -->
+
+<p>pipefilter works!</p>
+
+<div class= "row justify-content-center" style="background-color:rgb(182, 242, 130) ;">
+<div class="col-md-8 form-inline mb-2">
+    <h1><label for="pruductid">Search by Name</label></h1>
+    <br>
+    <input type="text" class="form-control" id="productid" placeholder="Enter Employee name" [(ngModel)]="gendersearch">
+</div>
+
+<div class="col-md-8 ">
+    <table class="table table-bordered table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">gender</th>
+                <th scope="col">name</th>
+                <th scope="col">compony</th>
+                <th scope="col">salary</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of EmpArr | pipefilter:gendersearch">
+                <th scope="row">{{emp.Id}}</th>
+                <td>{{emp.gender}}</td>
+                <td>{{emp.name}}</td>
+                <td>{{emp.compony}}</td>
+                <td>{{emp.salary}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+</div>

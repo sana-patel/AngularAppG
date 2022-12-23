@@ -1,0 +1,22 @@
+<h1 style="text-align:center ; background-color: bisque; color: blue; ">comp2 works!</h1>
+
+
+<div class="container" style="background-color: rgb(188, 247, 125); color: rgb(82, 25, 25); font-size: larger;">
+    <h1>component 2</h1>
+    <table class="table table-striped" *ngFor ="let user of users">
+        <tr>
+            <td> User Name: {{user.name}} </td>
+        </tr>
+      
+        <tr>
+            <td> User Age: {{user.age}} </td>
+        </tr>
+ 
+        <tr>
+            <td> User Email: {{user.email}} </td>
+        </tr>
+        <hr>
+
+    </table>
+    <div>
+        <button (click)="gateData()"  class="btn btn-primary">Get Data</button>

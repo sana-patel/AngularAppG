@@ -1,0 +1,46 @@
+
+<div  class="container" >
+<p>pipe works!</p>
+<h1>Date:</h1>
+<h4> Date :{{todayDate}}</h4>
+<h4> Date in date format{{todayDate | date}}</h4>
+<h4> Date in full format{{todayDate | date :'fullDate'}}</h4>
+<hr>
+
+<h1>String:</h1>
+ <h4> Original String  :{{str}}</h4>
+<h4> String in uppercase  :{{str | uppercase }}</h4>
+<h4> String in lowercase  : {{str | lowercase}}</h4>
+<h4> String in titlecase  : {{str | titlecase}}</h4>
+
+<h4> String in by using splice : {{str | slice:7 }}</h4>
+<h4> String in uppercase and splice :{{str | uppercase | slice:7 }}</h4>
+<hr>
+<h1>object: by usin json</h1>
+<br><br>
+<h2>Object by using json:
+    {{user | json}}</h2>
+    <h2>Object by using json and uppercase:
+        <br>
+        {{user | json | uppercase}}</h2>
+        <hr>
+
+        <h1>Numbers :</h1>
+        <!-- <h4>{{000002000.3000 | Number : '2.2-3'}}</h4> -->
+        <h4>numbers with selected decimal characters :{{2.3 | number : '3.3-5'}}</h4>
+        <hr>
+
+
+        <h1>Currency:</h1>
+
+        <h4> Currency:{{200}}</h4>
+        <h4> Currency in usd by using pipe:{{200 | currency:'USD'}}</h4>
+        <h4> Currency in GBP by using currency pipe:{{200 | currency:'GBP'}}</h4>
+        <h4> Currency in INR by using currency pipe:{{200 | currency:'INR'}}</h4>
+    </div>
+
+
+    
+
+
+

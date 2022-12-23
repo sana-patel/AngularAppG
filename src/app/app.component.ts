@@ -1,4 +1,5 @@
 import { Component,OnInit} from '@angular/core';
+import { DemoService } from './demoService';
 // import { employee } from './models/movies';
 // import { employee } from '../models/employee';
 
@@ -8,6 +9,24 @@ import { Component,OnInit} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+products={}
+  // apiURL:{};
+  
+  constructor(private _demoService:DemoService){
+
+
+  }
+
+  ngOnInit():void {
+   this._demoService.getUsersData().subscribe(data=>{
+    console.log('getting data from api',data);
+    
+   })
+
+  //  this.apiURL= this._demoService.apiURL;
+    
+  };
+
   title = 'angularapp';
   public  uid :number;
  
@@ -48,12 +67,9 @@ name = "sana patel"
     
   }
 
-  constructor() { };
+ 
 
-  ngOnInit() {
-   
-    
-  };
+ 
   
 
 }

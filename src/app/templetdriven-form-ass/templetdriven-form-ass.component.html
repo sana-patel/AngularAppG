@@ -1,0 +1,63 @@
+<p>templetdriven-form-ass works!</p>
+
+<div class="container" style="text-align:center ;">
+    <h1>Registration form</h1>
+
+</div>
+<div class="form-group" class="container">
+    <form   #loginForm="ngForm" (ngSubmit)="userLogin(loginForm.value)">
+       
+        <h4>First Name:</h4>
+        <input type="text" name="firstName" placeholder="Enter First name" required [ngModel]="firstName" maxlength="5" minlength="5" #uname="ngModel" ngModel>
+
+         <span *ngIf="uname.errors?.minlength,maxlength">Name must be at least 5 characters long.</span>
+    
+
+
+        <br><br>
+        <h4>Last Name:</h4>
+        <input type="text" name="lastName" placeholder="Enter last name" required   [ngModel]="lastName"  minlength="5"  maxlength="10"  #lname="ngModel"   [(ngModel)]="titleModel" ngModel>
+
+       
+        <span style="color:red" *ngIf="lname.touched && lname.errors?.maxlength">
+            10 max
+      </span>
+        <br><br>
+        <h4>Birth Date:</h4>
+        <input type="date" name="Age" placeholder="Enter Age" required ngModel>
+        <br><br>
+        <h4>Email:</h4>
+        <input type="text" name="Email" placeholder="Enter Email" email required ngModel #email="ngModel">
+        <span class="help-bpx"  *ngIf="email.touched && !email.valid">Enter email address</span>
+        
+        <br><br>
+        <h4>Phone no.:</h4>
+        <input type="number" name="phone" placeholder="Enter Phone number" required ngModel>
+        <br><br>
+        <h4>City:</h4>
+        <label name="city"  >City</label>
+        <br>
+        <select name="City" ngModel>
+            <option value="mumbai" >Mumbai</option>
+            <option value="Kolkata" >Kolkata</option>
+            <option value="Delhi" >Delhi</option>
+
+        </select>
+        <br> <br>
+
+        <label>Gender</label>
+        <input type="radio" name="male" value="m"  ngModel>
+        <input type="radio" name="Female" value="f" ngModel>
+<br><br>
+      <input type="password" name="password" value="p" ngModel>
+      <br><br>
+      <input type="password" name="password" value="p"ngModel>
+      <br><br>
+      <button class="btn btn-success">Submitt</button>
+      &nbsp;    &nbsp;    &nbsp;
+      <button class="btn btn-primary" [disabled]="!loginForm.valid">Reset</button>
+    </form>
+
+  
+
+</div>

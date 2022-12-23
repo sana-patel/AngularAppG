@@ -1,0 +1,27 @@
+<h1 style="text-align:center ; background-color: bisque; color: blue; ">comp1 works!</h1>
+<!-- <div class="box">
+    User Name: <strong>{{userName}}</strong>
+   <br> <br>
+
+    <input type="text" name="" id="" placeholder="UpdateName" #uname>
+   <input type="button" (click)="UpdateUserName(uname)">
+</div> -->
+<div class="container" style="background-color: rgb(191, 237, 248); color: rgb(82, 25, 25); font-size: larger;">
+    <h1>component 1</h1>
+    <table class="table table-striped" *ngFor ="let user of users">
+        <tr>
+            <td> User Name: {{user.name}} </td>
+        </tr>
+        <tr>
+            <td> User Age: {{user.age}} </td>
+        </tr>
+        <tr>
+            <td> User Email: {{user.email}} </td>
+        </tr>
+        <hr>
+
+    </table>
+    <button (click)="gateData()"  class="btn btn-primary">Get Data</button>
+    </div>
+   
+
