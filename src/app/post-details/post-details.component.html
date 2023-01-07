@@ -1,0 +1,62 @@
+<p>post-details works!</p>
+<div>
+    <div>
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                           id 
+                        </th>
+                        <th>
+                           name
+                         </th>
+                         <th>
+                           UserName
+                         </th>
+                         <th>
+                           email
+                         </th>
+                         <th>
+                            address 
+                         </th>
+                         <th>
+                            phone
+                         </th>
+                         <th>
+                            website
+                         </th>
+                         <th>
+                            compony
+                         </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let idd of arrIds">
+                        <td>{{idd.id}}</td>
+                        <td>{{idd.name}}</td>
+                        <td>{{idd.username}}</td>
+                        <td>{{idd.email}}</td>
+                        <td>{{idd.address}}</td>
+                    
+                         <!-- <td>
+                            <ul *ngFor="let ad of post.address ">
+                            <li>{{ad.address.street}}</li>
+                            <li>{{ad.suite}}</li>
+                            <li>{{ad.city}}</li>
+                            <li>{{ad.zipcode}}</li>
+                        </ul>
+                            
+                        </td>  -->
+                        <td>{{idd.phone}}</td>
+                        <td>{{idd.website}}</td>
+                        <td>{{idd.company}}</td>
+                  
+
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>

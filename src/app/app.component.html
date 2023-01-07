@@ -131,4 +131,48 @@ ap
 
 <!-- <app-pipe></app-pipe> -->
 <!-- <app-filpterpipe></app-filpterpipe> -->
-<app-pipefilter></app-pipefilter>
+<!-- <app-pipefilter></app-pipefilter> -->
+
+
+<!-- <app-demopost></app-demopost> -->
+
+<header style="background-color: rgb(245, 207, 226);">
+  <nav>
+    <ul class="nav nav-tabs">
+      <li class="nav-item" > <a class="nav-link" routerLinkActive="active" routerLink="home/">Home</a></li>
+
+      <li class="nav-item" > <a class="nav-link" routerLinkActive="active" routerLink="aboutus/">About Us</a></li>
+      <li class="nav-item" > <a class="nav-link" routerLinkActive="active" routerLink="contactus/">Contact Us</a></li>
+      <li class="nav-item" > <a class="nav-link" routerLinkActive="active" routerLink="product/">product</a></li>
+      <li class="nav-item" > <a class="nav-link" routerLinkActive="active" routerLink="login/">Login</a></li>
+      <li class="nav-item" > <a class="nav-link" routerLinkActive="active" routerLink="gallary/">Gallary</a></li>
+      <li class="nav-item" > <a class="nav-link" routerLinkActive="active" routerLink="post/">post</a></li>
+      <li class="nav-item" > <a class="nav-link" routerLinkActive="active" routerLink="orders/">orders</a></li>
+
+    </ul>
+  </nav>
+</header>
+<!-- ------------------------------------------------------------------------------------------ -->
+<h1>code steps</h1>
+
+<header style="background-color: rgb(245, 207, 226);">
+  <nav>
+   
+      <ul class="nav nav-tabs">  
+    <li class="nav-item" > <a class="nav-link" routerLinkActive="active" routerLink="grocery/">grocery</a></li>
+    <li class="nav-item" > <a class="nav-link" routerLinkActive="active" routerLink="fashion/">fashion</a></li>
+    <li class="nav-item" > <a class="nav-link" routerLinkActive="active" routerLink="applainces/">applainces</a></li>
+   
+   
+      </ul>
+  </nav>
+</header>
+
+<button (click)="DeletePost()">Delete post</button>
+
+<app-rapidapi></app-rapidapi>
+
+
+
+
+<router-outlet></router-outlet>

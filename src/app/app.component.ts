@@ -1,5 +1,6 @@
 import { Component,OnInit} from '@angular/core';
 import { DemoService } from './demoService';
+import { UserdataService } from './services/userdata.service';
 // import { employee } from './models/movies';
 // import { employee } from '../models/employee';
 
@@ -12,7 +13,7 @@ export class AppComponent {
 products={}
   // apiURL:{};
   
-  constructor(private _demoService:DemoService){
+  constructor(private _demoService:DemoService,private _userdataService :UserdataService){
 
 
   }
@@ -67,7 +68,12 @@ name = "sana patel"
     
   }
 
- 
+  DeletePost(){
+    this._userdataService.deletepostById(1).subscribe(res =>{
+      console.log(res);
+      
+    })
+  }
 
  
   

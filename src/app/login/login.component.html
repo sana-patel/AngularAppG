@@ -1,0 +1,49 @@
+<!-- <p>login works!</p> -->
+<div style="background-color:rgb(247, 213, 149) ;">
+<br><br>
+<div class="container"  >
+    <div class="row justify-content-center" >
+        <div class="col-md-6 text-left rounded shadow py-5" style="background-color: rgb(170, 228, 169);">
+            <h2>Login Form</h2>
+            <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm" style="background-color: rgb(237, 242, 190);">
+                <div class="form-group">
+                    <label for="username"><u>User Name</u></label>
+                    <br>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter user name"
+                        ngModel required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="email"><u>Email address</u></label>
+                    <br>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" ngModel
+                        required>
+
+                </div>
+                <br>
+
+                <div class="form-group">
+                    <label for="Password"><u>Password</u></label>
+                    <br>
+                    <input type="password" class="form-control" id="password" name="password"
+                        placeholder="Enter password" ngModel required>
+
+                </div>
+
+
+                <!-- <div class="form-group">
+                    <label for="course">Select Course</label>
+                    <select class="form-control" name="course" id="course" ngModel>
+                        <option value="Angular">Angular</option>
+                        <option value="HTML">HTML</option>
+                        <option value="JavaScript">JavaScript</option>
+                    </select>
+                </div> -->
+                <br>
+
+                <button [disabled]="!myForm.value" type="submit" class="btn btn-primary" click="checkuser(uname.value,pwd.value)">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,38 @@
+<p>rapidapi works!</p>
+<div>
+    <div>
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                        card
+                        </th>
+                        <th>
+                            date
+                        </th>
+                        <th>
+                            id
+                        </th>
+                        <th>
+                            longURL
+                        </th>
+                        <th>
+                          title
+
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let ids of arrID.news">
+                        <td>{{ids.id}}</td>
+                        <td>{{ids.card}}</td>
+                        <td>{{ids.date}}</td>
+                        <td>{{ids.longURL}}</td>
+                        <td>{{ids.title}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

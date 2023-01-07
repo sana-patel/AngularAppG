@@ -14,7 +14,7 @@ export class PipefilterPipe implements PipeTransform {
     if(!args){
       return value;
     }
-   return value.filter(item=> item.name.indexOf(args)>-1)
+   return value.filter(item=> item.name.indexOf(args)>-1 || item.gender.indexOf(args)>-1)
       
     }
   }
